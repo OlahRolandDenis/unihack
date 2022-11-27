@@ -1,18 +1,15 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GoogleMap, MarkerF, Marker } from '@react-google-maps/api';
-import { GoogleMapsProvider } from '@ubilabs/google-maps-react-hooks';
-import { MarkerClusterer } from '@googlemaps/markerclusterer';
-import { SuperClusterAlgorithm } from '@googlemaps/markerclusterer';
-
 
 import { collection, addDoc, getDocs } from "firebase/firestore"; 
 import { db } from '../firebase.config';
 import NavBar from './NavBar';
 
 const Map = () => {
-    const [ lat, setLat ] = useState(45.76459166484408);
-    const [ lng, setLng ] = useState(21.177691381243957);
+    const [ lat, setLat ] = useState(45.76459166484408 + 0.2);
+    const [ lng, setLng ] = useState(21.177691381243957 + 0.2);
     const [ pings, setPings ] = useState([]);
+    // const pings = [];
 
     useEffect( () => {
         getLocation();
@@ -32,6 +29,7 @@ const Map = () => {
             () => console.log('unable to detect location')
         )
     }
+    const localPings = []
 
     const ping = async () => {
         try {
@@ -43,6 +41,9 @@ const Map = () => {
                 longitude: lng
               }
             });
+
+            localPings.push(docRef);
+            console.log(pings);
           } catch (e) {
             console.error("Error adding document: ", e);
           }    
@@ -51,11 +52,11 @@ const Map = () => {
     const getPings = async () => {
         const querySnapshot = await getDocs(collection(db, "trash"));
         querySnapshot.forEach((doc) => {
-          setPings( pings => [...pings], doc.data() )
-          console.log(doc.data());
+          localPings.push(doc.data());
         });
 
-        setPings(pings);
+        setPings(localPings);
+        console.log(localPings);
     }
 
     return (
@@ -67,10 +68,13 @@ const Map = () => {
 
             <NavBar />
 
-            <MarkerF
-                position={{lat: lat, lng: lng}}
-            >
-            </MarkerF>
+            { pings.map( ping => (
+                <MarkerF
+                    key={Math.random()}
+                    position={{lat: ping.location.latitude, lng: ping.location.longitude}}
+                >
+                </MarkerF>
+            ))}
 
             <div className='ping_btn'
                 onClick={ping}

@@ -6,8 +6,8 @@ nav {
     justify-content: space-between;
 
     padding: 5px 10px;
-    background-color: rgba(216, 216, 48, 0.8);
-    /* background-color: rgb(32, 32, 32); */
+    /* background-color: rgba(216, 216, 48, 0.8); */
+    background-color: #111;
 }
 
 nav .logo img {
