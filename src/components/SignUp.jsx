@@ -11,15 +11,12 @@ function SignUp(){
             <div className='sub-main'>
                 <div>
                     <div className='imgs'>
-                        <div className='container-image'>
+                
                           <img src={profile} alt="profile" className="profile" />
-
-                        </div>
 
                     </div>
                 </div>
                 <div>
-                    <h1>Login Page</h1>
                     <div>
                         <img src={email} alt="email" className="email"/>
                         <input type="text"  placeholder="email" className="name"/>

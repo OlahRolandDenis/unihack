@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { GoogleMap, MarkerF, Marker } from '@react-google-maps/api';
 
-import { collection, addDoc, getDocs } from "firebase/firestore"; 
+import { collection, addDoc, getDocs, deleteDoc  } from "firebase/firestore"; 
 import { db } from '../firebase.config';
 import NavBar from './NavBar';
 
