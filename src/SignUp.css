@@ -1,11 +1,16 @@
-.main{
-    text-align: center;
-    justify-content: center;
+.signup{
     display: flex;
-    padding: 90px 0 90px 0;
-    background-color: grey;
+    justify-content: center;
+    height: 550px;
+    width: 90%;
+    box-shadow: 8px 9px 10px 9px rgb(207, 207, 207) ;
+    padding-top: 30px;
+    border-radius: 60px;
+    background-color: white;
+    margin: auto;
+    margin-top: 5rem;
 }
-.sub-main{
+/* .sub-main{
     display: flex;
     justify-content: center;
     height: 550px;
@@ -15,7 +20,7 @@
     border-radius: 60px;
     background-color: white;
 
-}
+} */
 .imgs{
     padding-top: 20px;
     justify-content: center;
@@ -61,6 +66,8 @@ input{
 .name{
     padding-left: 70px;
     font-size: 20px;
+    
+    
 }
 .second-input{
     padding-top: 20px;
@@ -85,5 +92,8 @@ button{
 }
 a{
     color: blue;
+}
+h1{
+    text-align: center;
 }
  

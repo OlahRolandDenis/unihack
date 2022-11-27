@@ -6,7 +6,7 @@ import pass from "./image/pass.png";
 function SignUp(){
     return(
 
-        <div className='main'>
+        <div className='signup'>
             <div className='sub-main'>
                 <div>
                     <div className='imgs'>
