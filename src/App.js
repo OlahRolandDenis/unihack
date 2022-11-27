@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
+import './SignUp.css';
 import './styles/map.css';
 import './styles/navbar.css';
-import Home from './components/Home';
-
+import Home from './components/Home'
 
 function App() {
 return(
