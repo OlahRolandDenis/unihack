@@ -22,20 +22,15 @@ function SignUp(){
                     <h1>Login Page</h1>
                     <div>
                         <img src={email} alt="email" className="email"/>
-                        <input type="text"  placeholder="user name" className="name"/>
+                        <input type="text"  placeholder="email" className="name"/>
                     </div>
                     <div className="second-input">
                         <img src={pass} alt="pass" className="pass"/>
-                        <input type="password"  placeholder="user name" className="name"/>
+                        <input type="password"  placeholder="password" className="name"/>
                     </div>
                     <div className="login-button">
                     <Link to="/home">Login</Link>
                     </div>
-                
-                        <p className="link">
-                            <a href="#">Forgot password ?</a> Or <a href="#">Sign Up</a>
-                        </p>
-                 
                 </div>
 
             </div>
