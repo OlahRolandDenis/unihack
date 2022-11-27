@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import Home from './Home';
+import './styles/map.css';
+import './styles/navbar.css';
+import Home from './components/Home';
 
 
 function App() {

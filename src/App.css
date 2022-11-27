@@ -42,8 +42,10 @@
   height: 100vh;
 }
 
-h1 {
-  /* position: absolute; */
-  position: relative;
-  z-index: 1000;
+.gm-fullscreen-control {
+  display: none!important;
+ }
+
+.gmnoprint {
+  display: none;
 }
