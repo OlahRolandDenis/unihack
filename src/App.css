@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.map-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.gm-fullscreen-control {
+  display: none!important;
+ }
+
+.gmnoprint {
+  display: none;
+}
